@@ -14,7 +14,37 @@
                 <br/>
                 <button onclick="Roll()">Roll</button>
             </div>
+            <div class="card">
+                <img src="burger.png" alt="" height="70px" class="card-img">
+                <h3 class="card-heading">Veg Cheese Burger</h3>
+        
+                <div class="quantity-btn-container">
+                    <button type="button" onclick="decrement()">
+                        -
+                    </button>
+                    <span id="quantity">1</span>
+                    <button type="button" onclick="increment()">
+                        +
+                    </button>
+                </div>
+            </div>
+        
     </div>
+    
     <script src="script.js" ></script>
+    <script>
+        function increment() {
+            const quantityElement = document.getElementById("quantity");
+            const quantity = parseInt(quantityElement.innerText);
+            quantityElement.innerText = quantity + 1;
+        }
+
+        function decrement() {
+            const quantityElement = document.getElementById("quantity");
+            const quantity = parseInt(quantityElement.innerText);
+            quantityElement.innerText = quantity - 1;
+        }
+
+    </script>
 </body>
 </html>
